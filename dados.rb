@@ -1,4 +1,5 @@
 a = 5
 b = 6
+c = a + b
 
-puts a + b
+puts c
