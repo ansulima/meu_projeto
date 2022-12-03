@@ -1,5 +1,6 @@
-a = 5
-b = 6
-c = a + b
+class MinhaClasse
+end
 
-puts c
+objeto = MinhaClasse.new
+
+p objeto.object_id
