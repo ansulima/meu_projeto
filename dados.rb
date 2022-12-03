@@ -1,6 +1,14 @@
-class MinhaClasse
+class NomeDaClasse
+    def imprimir_ola(nome)
+        @nome = nome
+        puts "Olá #{@nome}"
+    end
+
+    def nome
+        @nome
+    end
 end
 
-objeto = MinhaClasse.new
-
-p objeto.object_id
+anderson = NomeDaClasse.new
+anderson.imprimir_ola("Anderson")
+anderson.nome
