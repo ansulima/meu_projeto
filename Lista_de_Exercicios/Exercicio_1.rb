@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 =begin
 
-Problem: Given a sorted array arr[] of n elements, 
-write a function to search a given element x in arr[] and return the index of x in the array.
-Consider array is 0 base index.
+Dada uma matriz arr[] de N elementos, a tarefa é escrever uma função 
+para pesquisar um determinado elemento x em arr[]
     
 =end
+
+list
