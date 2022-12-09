@@ -7,4 +7,5 @@ para pesquisar um determinado elemento x em arr[]
     
 =end
 
-list
+nome = "Anderson"
+puts nome
