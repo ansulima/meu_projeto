@@ -20,15 +20,24 @@ lista = Array.new
 lista << numero1 << numero2 << numero3 << numero4 << numero5 
 #lista = [1,23,14,24,67,54,81,17,40,58,10]
 p "Agora digite o numero que deseja encontrar na lista: "
-numero = gets.chomp.to_i
+numero = gets.chomp.to_i 
 #numero = 10
 i = 0
+resultado = 0
 while  i < lista.length #for i in lista
     if numero == lista[i]
         puts "O numero #{numero} está presente na posição #{i + 1}."
-    else
-        puts "O numero #{numero} não está presente na lista"
+    else 
+        numero != lista[i]
+       # puts "Numero não está na lista."
+        resultado = -1
     end
     i+=1
 end
+
+if resultado == -1
+    puts "numero nao esta na lista."
+
+end
+
 #puts "O numero #{numero} nao se encontra na lista."
