@@ -27,6 +27,6 @@ def bubbleSort(array)
       array
 end
 
-lista = [5,1,4,2,8]
+lista = [5, 1, 4, 2, 8]
 puts "##Bubble sort result##"
 p bubbleSort(lista)

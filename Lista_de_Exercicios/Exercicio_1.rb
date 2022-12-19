@@ -23,14 +23,13 @@ p "Agora digite o numero que deseja encontrar na lista: "
 numero = gets.chomp.to_i 
 #numero = 10
 i = 0
-resultado = 0
 while  i < lista.length #for i in lista
     if numero == lista[i]
         puts "O numero #{numero} está presente na posição #{i + 1}."
     else 
         numero != lista[i]
        # puts "Numero não está na lista."
-        resultado = -1
+        
     end
     i+=1
 end

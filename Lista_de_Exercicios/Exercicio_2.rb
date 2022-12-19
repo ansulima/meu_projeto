@@ -24,8 +24,8 @@ def bin_search(lista, esq, dir, numero)
         return bin_search(lista, meio + 1, dir, numero)
     end
 
-    #Se o numero não estiver presente na lista:
-    return -1
+#Se o numero não estiver presente na lista:
+return -1
 
 end
 
