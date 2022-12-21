@@ -1,7 +1,2 @@
-class MinhaClasse
-    
+def MinhaClasse
 end
-
-objeto = MinhaClasse.new
-
-
