@@ -1,15 +1,25 @@
-# testing mehod and class
+resultado = ''
 
-puts "Digite seu mês de nascimentos"
-month = gets.chomp.to_i
+loop do
+    puts resultado
+    puts 'Selecione uma das eguintes opções'
+    puts '1 - Descobrir a idade de uma pessoa'
+    puts '0 - sair do programa'
+    puts 'Opção:'
 
-case month
-when 1..3
-    puts "Você nasceu no começo do ano."
-when 4..6
-    puts "Você nasceu na primeira metade do ano."
-when 7..9
-    puts "Você nasceu na segunda metade do ano."
-when 10..12
-    puts "Você nasceu no final do ano."
+    opcao = gets.chomp.to_i
+
+    if opcao == 1
+        puts 'Digite o ano de nascimento:'
+        ano_nasc = gets.chomp.to_i
+        puts 'Digite o ano atual:'
+        ano_atual = gets.chomp.to_i
+        idade = ano_atual - ano_nasc
+        resultado = "Quem nasceu no ano de #{ano_nasc}, tem #{idade} anos em #{ano_atual}."
+    elsif opcao == 0
+        break
+    else
+        resultado = 'Opção invalida'
+    end
+    system "clear"
 end
