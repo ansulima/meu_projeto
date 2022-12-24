@@ -1,12 +1,15 @@
 # testing mehod and class
-def name
-    puts "Qual seu nome?"
-    gets.chomp.to_s
-end
 
-def idade
-    puts "Qual a sua idade?"
-    gets.chomp.to_i
-end
+puts "Digite seu mês de nascimentos"
+month = gets.chomp.to_i
 
-puts ("Nome:#{name}\nidade:#{idade} anos.")
+case month
+when 1..3
+    puts "Você nasceu no começo do ano."
+when 4..6
+    puts "Você nasceu na primeira metade do ano."
+when 7..9
+    puts "Você nasceu na segunda metade do ano."
+when 10..12
+    puts "Você nasceu no final do ano."
+end
