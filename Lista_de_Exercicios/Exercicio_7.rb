@@ -61,6 +61,10 @@ loop do
         puts "#{div}"
     elsif option == 4
         puts "#{mult}"
+    elsif option == 0
+        break
+    else
+        option = "Opção invalida"
     end
-        
+    system "clear"
 end
