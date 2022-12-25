@@ -66,5 +66,5 @@ loop do
     else
         option = "Opção invalida"
     end
+
 end
-system "Clear"
