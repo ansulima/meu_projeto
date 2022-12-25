@@ -19,6 +19,26 @@ def sub
     end
 end
 
+def div
+    x = 1
+    puts "Digite um numero para saber sua tabela:"
+    num = gets.chomp.to_i
+    while x <= 10
+        puts "#{x} / #{num} = #{x / num}"
+        x += 1
+    end
+end
+
+def mult
+    x = 1
+    puts "Digite um numero para saber sua tabela:"
+    num = gets.chomp.to_i
+    while x <= 10
+        puts "#{x} * #{num} = #{x * num}"
+        x += 1
+    end
+end
+
 number = ''
 
 loop do
@@ -37,6 +57,10 @@ loop do
         puts "#{soma}"
     elsif option == 2
         puts "#{sub}"
+    elsif option == 3
+        puts "#{div}"
+    elsif option == 4
+        puts "#{mult}"
     end
         
 end
