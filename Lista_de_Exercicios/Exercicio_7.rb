@@ -66,5 +66,5 @@ loop do
     else
         option = "Opção invalida"
     end
-    system "clear"
 end
+system "Clear"
