@@ -1,5 +1,5 @@
 # .each
-=begin names = ['Joãozinho', 'Manoel', 'Juca']
+names = ['Joãozinho', 'Manoel', 'Juca']
 
 name = 'Anderson Freitas'
 
@@ -8,17 +8,17 @@ names.each do |name|
 end
 
 puts name
-=end
+
 
 # usando o .each em hash
 
-=begin aulas = {'Aula 1' => 'Liberada', 'Aula 2' => 'Liberada', 'Aula 3' => 'Liberada', 'Aula 4' => 'Liberada', 'Aula 5' => 'Em breve'}
+aulas = {'Aula 1' => 'Liberada', 'Aula 2' => 'Liberada', 'Aula 3' => 'Liberada', 'Aula 4' => 'Liberada', 'Aula 5' => 'Em breve'}
 
 aulas.each do |key, value|
     puts "#{key} #{value}"
 end
 
-=end
+
 
 # usando o .map
 
@@ -37,3 +37,15 @@ puts " #{array}"
 
 puts "\n Novo array"
 puts " #{new_array}"
+
+
+
+# select
+
+array = [1, 2, 3, 4, 5, 6]
+
+selection = array.select do |a|
+    a >= 4
+end
+
+puts selection
