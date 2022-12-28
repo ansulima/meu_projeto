@@ -28,9 +28,9 @@ puts "\n Executando .map multiplicando cada item por 2"
 
 # O Array.map ! altera o array inicial(apagando o inicial)
 # O Array.map cria um novo array
-new_array = array.map! do |a|
-    a + 2
-end
+    new_array = array.map! do |a|
+        a + 2
+    end
 
 puts "\n Array orginal"
 puts " #{array}"
