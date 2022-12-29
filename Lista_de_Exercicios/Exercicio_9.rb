@@ -1,5 +1,6 @@
 # utilizando uma collection do tipo array, escreva um programa que receba 3 numeros e no final exiba o resultado de cada um deles elevado a segunda potência
 
+=begin
 def lista
     puts "Digite 3 numeros: "
     meu_array = [gets.chomp.to_i, gets.chomp.to_i, gets.chomp.to_i]
@@ -12,3 +13,5 @@ puts "O array elevado a potência 2 é #{new_array}"
 end
 
 puts "#{lista}"
+=end-
+

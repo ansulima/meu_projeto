@@ -1,41 +1,42 @@
-
-def soma
-    x = 1
-    puts "Digite um numero para saber sua tabela:"
-    num = gets.chomp.to_i
-    while x <= 10
-        puts "#{x} + #{num} = #{x + num}"
-        x += 1
+class Calculator
+    def soma
+        x = 1
+        puts "Digite um numero para saber sua tabela:"
+        num = gets.chomp.to_i
+        while x <= 10
+            puts "#{x} + #{num} = #{x + num}"
+            x += 1
+        end
     end
-end
 
-def sub
-    x = 1
-    puts "Digite um numero para saber sua tabela:"
-    num = gets.chomp.to_i
-    while x <= 10
-        puts "#{x} - #{num} = #{x - num}"
-        x += 1
+    def sub
+        x = 1
+        puts "Digite um numero para saber sua tabela:"
+        num = gets.chomp.to_i
+        while x <= 10
+            puts "#{x} - #{num} = #{x - num}"
+            x += 1
+        end
     end
-end
 
-def div
-    x = 1
-    puts "Digite um numero para saber sua tabela:"
-    num = gets.chomp.to_i
-    while x <= 10
-        puts "#{x} / #{num} = #{x / num}"
-        x += 1
+    def div
+        x = 1
+        puts "Digite um numero para saber sua tabela:"
+        num = gets.chomp.to_i
+        while x <= 10
+            puts "#{x} / #{num} = #{x / num}"
+            x += 1
+        end
     end
-end
 
-def mult
-    x = 1
-    puts "Digite um numero para saber sua tabela:"
-    num = gets.chomp.to_i
-    while x <= 10
-        puts "#{x} * #{num} = #{x * num}"
-        x += 1
+    def mult
+        x = 1
+        puts "Digite um numero para saber sua tabela:"
+        num = gets.chomp.to_i
+        while x <= 10
+            puts "#{x} * #{num} = #{x * num}"
+            x += 1
+        end
     end
 end
 
@@ -52,15 +53,16 @@ loop do
 
     print "Opção: "
     option = gets.chomp.to_i
+    
 
     if option == 1
-        puts "#{soma}"
+        puts "#{Calculator::soma}"
     elsif option == 2
-        puts "#{sub}"
+        puts "#{Calculator::sub}"
     elsif option == 3
-        puts "#{div}"
+        puts "#{Calculator::div}"
     elsif option == 4
-        puts "#{mult}"
+        puts "#{Calculator::mult}"
     elsif option == 0
         break
     else
