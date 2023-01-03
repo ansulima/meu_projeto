@@ -1,11 +1,17 @@
-list = [0, 1, 1, 2, 30, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-element = 55
+list = [0, 1, 2, 30, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+element = 13
 
 def jump_search(list, element)
+    
+    #Determine o tamanho do salto a ser dado
 
     jump_size = Math.sqrt(list.length).floor
 
+    # Determine o elemento inicial
+
     start = 0
+
+    # Enquanto o elemento atual for menor que o elemento que está procurando
 
     while list[start] < element
         start += jump_size
@@ -27,4 +33,4 @@ end
 
 puts "A lista contém #{list.length()} itens"
 
-puts "o número #{element} está na posição #{jump_search(list, element)+1}"
+puts jump_search(list, element)
