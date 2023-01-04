@@ -1,16 +1,18 @@
-list = [0, 1, 2, 30, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-element = 13
+list = [0, 1, 1, 2, 30, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+element = 55
 
 def jump_search(list, element)
     
     #Determine o tamanho do salto a ser dado
 
-    jump_size = Math.sqrt(list.length).floor
+    jump_size = 12
 
     # Determine o elemento inicial
 
-    start = 0
-
+    start = 8
+    # Pulando do indice 0 para o indice 4 ele retorna a posição do Element = 55
+    # pulando do indice 4 para o indice 8 ele retorna a posição do Element = 55
+    # Pulando do indice 8 para o indice 12 ele retorna a mensagem "Element not found in list"
     # Enquanto o elemento atual for menor que o elemento que está procurando
 
     while list[start] < element
