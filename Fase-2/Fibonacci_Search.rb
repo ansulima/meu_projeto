@@ -1,3 +1,4 @@
-a = "Anderson".split(" ")
+a = "Oi meu nome é Anderson"
+nome = a.split("_")
 
-puts a
+puts nome
