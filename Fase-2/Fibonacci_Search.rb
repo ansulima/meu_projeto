@@ -1,5 +1,3 @@
-array = [2, 3, 4, 10, 40]
-element = 2
 
 def fibonacci_search(array, element)
     l = 0
@@ -22,12 +20,15 @@ def fibonacci_search(array, element)
             k -= 2
         else
             return i
+            
         end
     end
-    return -1
+    return puts " Elemento #{element} is not present posicion -1."
+    
 end
 
-
+array = [2, 3, 4, 10, 40]
+element = 40
 index = fibonacci_search(array, element)
 
-puts "A posição do elemento #{element} no array é #{index}"
+puts "O elemento #{element} está presente no array na posição #{index}"
