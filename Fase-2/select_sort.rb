@@ -12,5 +12,6 @@ def selection_sort(array)
     array
 end
 
+array = [11, 12, 22, 25, 64]
 # testando o metodo
-p selection_sort([8, 5, 2, 9, 7, 6, 3, 1, 4])
+p selection_sort(array)
