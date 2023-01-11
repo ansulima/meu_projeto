@@ -36,3 +36,10 @@ def merge(left, right)
 
     result
 end
+
+list = [1, 5, 7, 3, 8, 2]
+sorted_list = merge_sort(list)
+middle = sorted_list.length / 2
+median = sorted_list[middle]
+
+puts median
