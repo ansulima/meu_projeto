@@ -3,8 +3,8 @@ def merge_sort(arr)
         return arr
     end
     middle = arr.length / 2
-    left = merge_sort(arr[0..minddle])
-    right = merge_sort(arr[minddle..0])
+    left = merge_sort(arr[0...middle])
+    right = merge_sort(arr[middle..-1])
 
     merge(left, right)
 end
@@ -15,11 +15,11 @@ def merge(left, right)
     j = 0
 
     while i < left.length && j < right.length
-        if left[i] <= right[i]
+        if left[i] <= right[j]
             result << left[i]
             i += 1
         else
-            result << right[i]
+            result << right[j]
             j += 1
         end
     end
