@@ -1,45 +1,27 @@
-def merge_sort(arr)
-    if arr.length <= 1
-        return arr
-    end
-    middle = arr.length / 2
-    left = merge_sort(arr[0...middle])
-    right = merge_sort(arr[middle..-1])
 
-    merge(left, right)
+def merge_sort(array)
+    if array.length <= 1
+        return array
+    end
+
+    middle = array.length / 2
+    left = merge_sort(array[0...minddle])
+    right = merge_sort(array[minddle..-1])
+
+    merge_sort(left, right)
+
 end
 
-def merge(left, right)
+def merg(left, right)
     result = []
     i = 0
     j = 0
 
     while i < left.length && j < right.length
-        if left[i] <= right[j]
-            result << left[i]
+        if left[i] <== right[j]
+            result << left{i}
             i += 1
-        else
-            result << right[j]
-            j += 1
-        end
-    end
-
-    while i < left.length
-        result << left[i]
-        i += 1
-    end
-
-    while j < right.length
-        result << right[j]
-        j += 1
-    end
-
-    result
 end
+array = [12, 11, 13, 5, 6, 7]
 
-list = [1, 5, 7, 3, 8, 2]
-sorted_list = merge_sort(list)
-middle = sorted_list.length / 2
-median = sorted_list[middle]
-
-puts median
+puts "o Array #{array} #{merge_sort(array)}"
