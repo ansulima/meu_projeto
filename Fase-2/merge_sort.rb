@@ -5,35 +5,35 @@ def merge_sort(array)
     end
 
     middle = array.length / 2
-    left = merge_sort(array[0...middle])
-    right = merge_sort(array[middle..-1])
+    left_half = merge_sort(array[0...middle])
+    right_half = merge_sort(array[middle..-1])
 
-    merge(left, right)
+    merge(left_half, right_half)
 
 end
 
-def merge(left, right)
+def merge(left_half, right_half)
     result = []
     i = 0
     j = 0
 
-    while i < left.length && j < right.length
-        if left[i] <= right[j]
-            result << left{i}
+    while i < left_half.size && j < right_half.size
+        if left_half[i] <= right_half[j]
+            result << left_half{i}
             i += 1
         else
-            result << right[j]
+            result << right_half[j]
             j += 1
         end
     end
 
-    while i < left.length
-        result << left[i]
+    while i < left_half.size
+        result << left_half[i]
         i += 1
     end
 
-    while j < right.length
-        result << right[j]
+    while j < right_half.size
+        result << right_half[j]
         j += 1
     end
 
