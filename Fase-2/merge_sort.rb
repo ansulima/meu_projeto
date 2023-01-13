@@ -1,3 +1,6 @@
+# Passei a função com 3 argumentos O array ooriginal, o indice inicial e o indice final
+#  left e right
+
 def merge_sort(arr, l, r)
     if l < r
         m = l + ( r - l) / 2
