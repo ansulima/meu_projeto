@@ -1,14 +1,14 @@
 
-def merge_sort(array)
-    if array.length <= 1
-        return array
+def merge_sort(array, left, right)
+    if right - left <= 1
+        return array[left..right]
     end
 
-    middle = array.length / 2
-    left_half = merge_sort(array[0...middle])
-    right_half = merge_sort(array[middle..-1])
+    middle = (left + right) / 2
+    left_half = array[left..middle]
+    right_half = array[middle..right]
 
-    merge(left_half, right_half)
+ #   merge(left_half, right_half)
 
 end
 
@@ -40,5 +40,5 @@ def merge(left_half, right_half)
     result
 end
 array = [12, 11, 13, 5, 6, 7]
-sorted_array = merge_sort(array)
+sorted_array = merge_sort(array, 0, array.length - 1)
 puts sorted_array
