@@ -1,44 +1,59 @@
-
-def merge_sort(array, left, right)
-    if right - left <= 1
-        return array[left..right]
+def merge_sort(arr, l, r)
+    if l < r
+        m = l + ( r - l) / 2
+        merge_sort(arr, l, m)
+        merge_sort(arr, m + 1, r)
+        merge(arr, l, m, r)
     end
-
-    middle = (left + right) / 2
-    left_half = array[left..middle]
-    right_half = array[middle..right]
-
- #   merge(left_half, right_half)
-
+    return arr
 end
 
-def merge(left_half, right_half)
-    result = []
+def merge(arr, l, m, r)
+    n1 = m - l + 1
+    n2 = r - m
+
+    left = Array.new(n1)
+    right = Array.new(n2)
+
+    for i in 0...n1
+        left[i] = arr[l + i]
+    end
+
+    for j in 0...n2
+        right[j] = arr[m + 1 + j]
+    end
+
     i = 0
     j = 0
+    k = l
 
-    while i < left_half.size && j < right_half.size
-        if left_half[i] <= right_half[j]
-            result << left_half{i}
+    while i < n1 && j < n2
+        if left[i]<= right[j]
+            arr[k] = left[i]
             i += 1
         else
-            result << right_half[j]
+            arr[k] = right[j]
             j += 1
         end
+        k += 1
     end
 
-    while i < left_half.size
-        result << left_half[i]
+    while i < n1
+        arr[k] = left[i]
         i += 1
+        k += 1
     end
 
-    while j < right_half.size
-        result << right_half[j]
+    while j < n2
+        arr[k] = right[j]
         j += 1
+        k += 1
     end
-
-    result
 end
-array = [12, 11, 13, 5, 6, 7]
-sorted_array = merge_sort(array, 0, array.length - 1)
-puts sorted_array
+
+arr = [12, 11, 13, 5, 6, 7]
+n = arr.length
+puts "Array desordenado #{arr}"
+
+arr = merge_sort(arr, 0, n - 1)
+puts "Array ordenado é #{arr}"
