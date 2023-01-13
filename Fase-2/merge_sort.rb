@@ -2,6 +2,8 @@
 #  left e right
 
 def merge_sort(arr, l, r)
+
+# Aqui dentro eu verifuei se o indice final é maior que o indice inial. se sim ele retorna a o array pois o aray está ordenado.
     if l < r
         m = l + ( r - l) / 2
         merge_sort(arr, l, m)
