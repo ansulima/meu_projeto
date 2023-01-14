@@ -13,6 +13,8 @@ def merge_sort(arr, l, r)
     return arr
 end
 
+# Chamando a função merge recursivamente para as metades esquerda e direita do array
+# acontece a mescla das duas metades direita e esquerda, mas ó depois de ordenadas recursivamente
 def merge(arr, l, m, r)
     n1 = m - l + 1
     n2 = r - m
