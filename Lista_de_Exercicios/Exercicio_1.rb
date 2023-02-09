@@ -7,7 +7,7 @@ para pesquisar um determinado elemento x em arr[]
     
 =end
 
-p "Digite um numero"
+print "Digite um numero"
 ###Linear search###
 
 p "Digite 5 numeros para a lista. Digite um de cada vez."
