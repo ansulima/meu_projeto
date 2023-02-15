@@ -3,7 +3,7 @@ def name
     a = gets.chomp
     
 
-    puts "Welcome #{a} "
+    puts "Seja bem vindo #{a} "
 end
 
 name
